@@ -64,15 +64,14 @@ int main(){
         //cout<<seq<<" "<<nextSeq<<"\n";
         cal(Points[seq],Points[nextSeq]);
     }
-
+/*/
    for(int i = 0; i <Road.size(); i++){
        cout<<Road[i].x<<","<<Road[i].y<<"\n";
    } 
-
+*/
     for(int i = 0; i <5; i++){
         int temp;
         cin>>temp;
         cout << Road[temp % Road.size()].x <<" "<< Road[temp % Road.size()].y<<"\n";
     }
-    
 }
