@@ -4,6 +4,9 @@
 using namespace std;
 
 int main(){
+    cin.tie(NULL);
+    cout.tie(NULL);
+    ios::sync_with_stdio(false);
     vector<pair<int,int> > v;
     int N,M;
     cin>>N>>M;
@@ -22,15 +25,12 @@ int main(){
                     over = true;
                 }
             }
-            if(over){
-                //cout<<"overlapped\n";
+            if(over)
                 continue;
-            }
         }
-        if(v.size()==N){
-            //cout<<"full\n";
+        if(v.size()==N)
             continue;
-        }
+        
         sort(v.begin(),v.end());
         v.push_back(make_pair(v[0].first + N,v[0].second));
 
@@ -49,16 +49,8 @@ int main(){
                     minIndex = tempResult;
             }
         }
-        // cout<<"vector :\n";
-        // for(int i = 0; i < v.size(); i++){
-        //     cout<<v[i].first<<" "<<v[i].second<<"\n";
-        // }
 
         v.erase(v.begin()+v.size()-1);
-        // cout<<"\nsecond vector :\n";
-        // for(int i = 0; i < v.size(); i++){
-        //     cout<<v[i].first<<" "<<v[i].second<<"\n";
-        // }
 
         v.push_back(make_pair(minIndex,temp));
         cout<<temp<<" "<<minIndex<<"\n";
