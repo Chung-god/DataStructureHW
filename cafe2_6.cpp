@@ -14,9 +14,6 @@ int main(){
             v.push_back(make_pair(1,temp));
             cout<<temp<<" 1\n";
             continue;
-        }
-        else if(v.size() == N){
-            continue;
         }else{
             bool over = false;
             for(int i =0; i <v.size();i++){
@@ -25,7 +22,14 @@ int main(){
                     over = true;
                 }
             }
-            if(over) continue;
+            if(over){
+                //cout<<"overlapped\n";
+                continue;
+            }
+        }
+        if(v.size()==N){
+            //cout<<"full\n";
+            continue;
         }
         sort(v.begin(),v.end());
         v.push_back(make_pair(v[0].first + N,v[0].second));
@@ -45,18 +49,18 @@ int main(){
                     minIndex = tempResult;
             }
         }
-        cout<<"vector :\n";
-        for(int i = 0; i < v.size(); i++){
-            cout<<v[i].first<<" "<<v[i].second<<"\n";
-        }
+        // cout<<"vector :\n";
+        // for(int i = 0; i < v.size(); i++){
+        //     cout<<v[i].first<<" "<<v[i].second<<"\n";
+        // }
 
         v.erase(v.begin()+v.size()-1);
-        cout<<"\nsecond vector :\n";
-        for(int i = 0; i < v.size(); i++){
-            cout<<v[i].first<<" "<<v[i].second<<"\n";
-        }
+        // cout<<"\nsecond vector :\n";
+        // for(int i = 0; i < v.size(); i++){
+        //     cout<<v[i].first<<" "<<v[i].second<<"\n";
+        // }
 
         v.push_back(make_pair(minIndex,temp));
-        cout<<"\nresult : " <<temp<<" "<<minIndex<<"\n\n";
+        cout<<temp<<" "<<minIndex<<"\n";
     }
 }
