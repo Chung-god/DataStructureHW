@@ -86,6 +86,8 @@
         ".cu": "cd $dir && nvcc $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt"
     },
     "files.associations": {
-        "iostream": "cpp"
+        "iostream": "cpp",
+        "queue": "cpp",
+        "stack": "cpp"
     }
 }
