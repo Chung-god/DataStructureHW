@@ -88,6 +88,9 @@
     "files.associations": {
         "iostream": "cpp",
         "queue": "cpp",
-        "stack": "cpp"
-    }
+        "stack": "cpp",
+        "list": "cpp",
+        "xstring": "cpp"
+    },
+    "C_Cpp.errorSquiggles": "Disabled"
 }
